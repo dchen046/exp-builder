@@ -11,7 +11,15 @@ function App() {
 
   return (
     <>
-      <CvForm />
+      <div className='d-flex'>
+        <div className='container col-4'>
+          <CvForm />
+        </div>
+
+        <div className='container col-6'>
+          
+        </div>
+      </div>
     </>
   )
 }

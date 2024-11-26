@@ -1,4 +1,4 @@
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
@@ -35,7 +35,7 @@ function Info() {
     return (
         <Form >
             <FormTypes inputs={inputsInfo} />
-            <Button variant="success" type="submit">Save</Button>
+            {/* <Button variant="success" type="submit">Save</Button> */}
         </Form>
     )
 }
