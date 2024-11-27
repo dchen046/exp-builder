@@ -8,21 +8,39 @@ function InfoTab({tabIndex, tabHeader, createForm}) {
                 {tabHeader}
             </Accordion.Header>
             <Accordion.Body>
-                {createForm}
+                {createForm()}
             </Accordion.Body>
         </Accordion.Item>
-    )
+    );
+}
+
+function CreateAllTabs({cvTabs}) {
+    return (
+        cvTabs.map( (tab, index) => {
+            return <InfoTab key={index} tabIndex={`${index}`} tabHeader={tab.header} createForm={tab.func} />
+        })
+    );
+}
+
+class CvTab {
+    constructor(header, func) {
+        this.header = header;
+        this.func = func;
+    }
 }
 
 function CvForm() {
-    const headers = ['General Info', 'Education', 'Experience', 'Projects']
+    const cvTabs = [
+        new CvTab('General Info', Info),
+        new CvTab('Education', Info),
+        new CvTab('Experience', Info),
+        new CvTab('Projects', Info)
+    ]
+
     return (
         <section>
             <Accordion defaultActiveKey='0' className='col-auto'>
-                <InfoTab tabIndex='0' tabHeader={headers[0]} createForm={<Info />} />
-                {/* <InfoTab tabIndex='1' tabHeader={headers[1]} createForm={<Info />} />
-                <InfoTab tabIndex='2' tabHeader={headers[2]} createForm={<Info />} />
-                <InfoTab tabIndex='3' tabHeader={headers[3]} createForm={<Info />} /> */}
+                <CreateAllTabs cvTabs={cvTabs} />
             </Accordion>
         </section>
 

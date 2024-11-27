@@ -2,7 +2,6 @@
 import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 
-
 function FormTypes({ inputs }) {
     return (
         inputs.map((input, index) => {
