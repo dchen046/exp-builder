@@ -3,7 +3,7 @@
 // import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CvForm from './components/CvForm.jsx'
+import CvForm from './components/Forms/CvForm';
 
 
 function App() {
@@ -12,13 +12,11 @@ function App() {
   return (
     <>
       <div className='d-flex'>
-        <div className='container col-4'>
+        <section id='inputs' className='container col-4'>
           <CvForm />
-        </div>
+        </section>
 
-        <div className='container col-6'>
-          
-        </div>
+        <section id='resume' className='container col-6'></section>
       </div>
     </>
   )
