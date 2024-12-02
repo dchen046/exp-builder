@@ -1,6 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
-import Info from './Info';
-import Education from './Education';
+import InfoForm from './InfoForm';
+import EducationForm from './EducationForm';
+import ExperienceForm from './ExperienceForm';
 import { CvTab } from '../../utility/CustomClasses';
 
 function InfoTab({tabIndex, tabHeader, handleCreation}) {
@@ -26,10 +27,10 @@ function CreateAllTabs({cvTabs}) {
 
 function CvForm() {
     const cvTabs = [
-        new CvTab('General Info', Info),
-        new CvTab('Education', Education),
-        new CvTab('Experience', Info),
-        new CvTab('Projects', Info)
+        new CvTab('General Info', InfoForm),
+        new CvTab('Education', EducationForm),
+        new CvTab('Experience', ExperienceForm),
+        new CvTab('Projects', InfoForm)
     ]
 
     return (

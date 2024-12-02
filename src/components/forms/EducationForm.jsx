@@ -1,7 +1,7 @@
 import { InputInfo } from '../../utility/CustomClasses';
 import { CreateForm } from '../../utility/FormCreation';
 
-function Education() {
+function EducationForm() {
     const inputsInfo = [
         new InputInfo('School Name'),
         new InputInfo('Date', 'date'),
@@ -11,4 +11,4 @@ function Education() {
     return <CreateForm inputsInfo={inputsInfo} />
 }
 
-export default Education;
+export default EducationForm;
