@@ -1,15 +1,5 @@
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
-
-function CreateFormGroup ({label, value, updateInfo}) {
-    return (
-        <Form.Group>
-            <FloatingLabel label={label}>
-                <Form.Control type='text' name={label} value={value} onChange={updateInfo}></Form.Control>
-            </FloatingLabel>
-        </Form.Group>
-    )
-}
+import { CreateFormGroup } from './utility/FormCreations';
 
 function CreateForm({ currInfo, updateInfo }) {
     return (
@@ -25,7 +15,7 @@ function CreateForm({ currInfo, updateInfo }) {
 export function InfoForm({ currInfo, updateInfo }) {
     return (
         <section>
-            <CreateForm currInfo={currInfo} updateInfo={updateInfo} />;
+            <CreateForm currInfo={currInfo} updateInfo={updateInfo} />
         </section>
     )
 }

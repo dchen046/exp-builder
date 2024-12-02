@@ -1,46 +1,45 @@
 import Accordion from 'react-bootstrap/Accordion';
-import {InfoForm} from './InfoForm';
-import { useState } from 'react'
+import { InfoForm } from './InfoForm';
+import { EducationForm } from './EducationForm';
 
-function InputTab({ tabIndex, tabHeader, handleCreation }) {
-    console.log(tabIndex);
+function InputTab({ tabIndex, tabHeader, form }) {
     return (
         <Accordion.Item eventKey={tabIndex}>
             <Accordion.Header>
                 {tabHeader}
             </Accordion.Header>
             <Accordion.Body>
-                {handleCreation()}
+                {form}
             </Accordion.Body>
         </Accordion.Item>
     );
 }
 
-function CreateInfoForm() {
-    const [currInfo, setInfo] = useState({
-        name: '',
-        email: '',
-        linkedin: '',
-        github: '',
-    });
-
-    function updateInfo(e) {
-        setInfo(prevInfo => ({
-            ...prevInfo,
-            [e.target.name]: e.target.value,
-        }));
-    }
-
-    return <InfoForm currInfo={currInfo} updateInfo={updateInfo} />
-}
-
-function CvForm() {
+function CvForm({
+    currInfo,
+    updateInfo,
+    educations,
+    updateEducation
+}) {
+    let index = 0;
     return (
         <section>
-            <Accordion defaultActiveKey='0' className='col-auto'>
-                <InputTab tabIndex='0' tabHeader={'Personal Info'} handleCreation={CreateInfoForm} />
-                <InputTab tabIndex='1' tabHeader={'Eudcation'} handleCreation={CreateInfoForm} />
-                {/* <InputTab tabIndex={++index} tabHeader={'Experience'} handleCreation={InfoForm} /> */}
+            <Accordion defaultActiveKey={index} className='col-auto'>
+                <InputTab
+                    tabIndex={index++}
+                    tabHeader={'Personal Info'}
+                    form={<InfoForm currInfo={currInfo} updateInfo={updateInfo} />}
+                />
+
+                <InputTab 
+                    tabIndex={index++} 
+                    tabHeader={'Eudcation'} 
+                    form={<EducationForm educations={educations} updateEducation={updateEducation} />} />
+{/* 
+                <InputTab 
+                    tabIndex={++index} 
+                    tabHeader={'Experience'} 
+                    handleCreation={InfoForm} /> */}
             </Accordion>
         </section>
     );
