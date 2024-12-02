@@ -1,6 +1,5 @@
-// import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
+import Form from 'react-bootstrap/Form';
 
 function FormTypes({ inputs }) {
     return (
@@ -16,27 +15,12 @@ function FormTypes({ inputs }) {
     )
 }
 
-class InputInfo {
-    constructor(label, type = 'text') {
-        this.label = label;
-        this.type = type;
-    }
-}
-
-function Info() {
-    const inputsInfo = [
-        new InputInfo('Full Name'),
-        new InputInfo('Email', 'email'),
-        new InputInfo("GitHub Link"),
-        new InputInfo("LinkedIn Link")
-    ]
-
+export function CreateForm({inputsInfo}) {
     return (
         <Form >
             <FormTypes inputs={inputsInfo} />
-            {/* <Button variant="success" type="submit">Save</Button> */}
         </Form>
     )
 }
 
-export default Info;
+
