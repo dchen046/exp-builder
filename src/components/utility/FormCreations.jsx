@@ -48,5 +48,3 @@ export function CreateFormGroup ({label, value, updateInfo, name = '', type = 't
         </Form.Group>
     );
 }
-
-

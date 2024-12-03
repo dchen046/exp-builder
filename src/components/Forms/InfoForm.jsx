@@ -1,5 +1,5 @@
 import Form from 'react-bootstrap/Form';
-import { CreateFormGroup } from './utility/FormCreations';
+import { CreateFormGroup } from '../utility/FormCreations';
 
 function CreateForm({ currInfo, updateInfo }) {
     return (

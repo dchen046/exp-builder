@@ -1,5 +1,5 @@
 import { Button, Form } from "react-bootstrap";
-import { CreateFormGroup } from "./utility/FormCreations";
+import { CreateFormGroup } from "../utility/FormCreations";
 
 function CreateForm({ experiences, updateExperience, handleRemove }) {
     return (
