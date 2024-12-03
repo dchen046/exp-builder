@@ -1,6 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
 import { InfoForm } from './InfoForm';
 import { EducationForm } from './EducationForm';
+import { ExperienceForm } from './ExperienceForm';
 import './styles/forms.css'
 
 function InputTab({ tabIndex, tabHeader, form }) {
@@ -22,7 +23,7 @@ function CvForm({
     educations,
     updateEducation,
     experiences,
-    updateExperiences
+    updateExperience
 }) {
     let index = 0;
     return (
@@ -39,10 +40,10 @@ function CvForm({
                     tabHeader={'Eudcation'} 
                     form={<EducationForm educations={educations} updateEducation={updateEducation} />} />
 
-                {/* <InputTab 
+                <InputTab 
                     tabIndex={index++} 
                     tabHeader={'Experience'} 
-                    form={< />} /> */}
+                    form={<ExperienceForm experiences={experiences} updateExperience={updateExperience} />} />
             </Accordion>
         </section>
     );

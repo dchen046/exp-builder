@@ -18,7 +18,7 @@ function App() {
   });
 
   const [educations, updateEducation] = useState(sample.educations);
-  const [experiences, updateExperiences] = useState(sample.experiences);
+  const [experiences, updateExperience] = useState(sample.experiences);
 
   function updateInfo(e) {
     console.log(e.target.value);
@@ -32,14 +32,13 @@ function App() {
     <>
       <main>
         <div id='inputs'>
-          {/* <InfoForm currInfo={currInfo} updateInfo={updateInfo} /> */}
           < CvForm 
             currInfo={currInfo} 
             updateInfo={updateInfo} 
             educations={educations}
             updateEducation={updateEducation}
             experiences={experiences}
-            updateExperiences={updateExperiences}/>
+            updateExperience={updateExperience}/>
         </div>
         <div id='resume'></div>
       </main>
