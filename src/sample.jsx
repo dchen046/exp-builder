@@ -22,7 +22,7 @@ export const sample = {
             location: 'City, State',
             start: '2020-05',
             end: '2024-11',
-            responsibilities: 'Sample bullet points\nSample bullet points\nSample bullet points\n',
+            responsibilities: 'Sample bullet points\nSample bullet points\nSample bullet points',
             id: Date.now(),
         },
     ],

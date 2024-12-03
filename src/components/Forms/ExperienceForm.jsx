@@ -1,5 +1,5 @@
 import { Button, Form } from "react-bootstrap";
-import { CreateFormGroup } from "./utility/FormCreations";
+import { CreateFormGroup } from "../utility/FormCreations";
 
 function CreateForm({ experiences, updateExperience, handleRemove }) {
     return (
@@ -12,7 +12,7 @@ function CreateForm({ experiences, updateExperience, handleRemove }) {
                         <CreateFormGroup label='Location' value={experience.location} updateInfo={updateExperience} index={index} />
                         <CreateFormGroup label='Start Date' name="start" type="month" value={experience.start} updateInfo={updateExperience} index={index} />
                         <CreateFormGroup label='End Date' name="end" type="month" value={experience.end} updateInfo={updateExperience} index={index} />
-                        <CreateFormGroup label='Responsibilities' type="textarea" value={experience.responsibilities} updateInfo={updateExperience} index={index} />
+                        <CreateFormGroup label='Responsibilities' type='textarea' value={experience.responsibilities} updateInfo={updateExperience} index={index} />
                         <CreateDeleteBtn handleRemove={handleRemove} index={index} />
                     </Form>
                 </li>
@@ -50,6 +50,7 @@ export function ExperienceForm( {experiences, updateExperience} ) {
     const handleChangeExp = (index, e) => {
         const { name, value } = e.target;
         const update = experiences.map((exp, i) => i === index ? { ...exp, [name]: value } : exp);
+        
         updateExperience(update);
     }
 

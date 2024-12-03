@@ -1,4 +1,4 @@
-import { CreateFormGroup } from './utility/FormCreations';
+import { CreateFormGroup } from '../utility/FormCreations';
 import { Form, Button } from 'react-bootstrap';
 
 

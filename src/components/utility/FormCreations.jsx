@@ -17,7 +17,7 @@ export function CreateFormGroup ({label, value, updateInfo, name = '', type = 't
         );
     }
 
-    const update = (e) => {
+    const handleUpdate = (e) => {
         updateInfo(index, e);
     }
 
@@ -29,8 +29,8 @@ export function CreateFormGroup ({label, value, updateInfo, name = '', type = 't
                     as={type} 
                     style={{ height: '100px' }}
                     name={name} 
-                    value={value}
-                    onChange={update}></Form.Control>
+                    value={value || ''}
+                    onChange={handleUpdate}></Form.Control>
             </FloatingLabel>
         </Form.Group>
         )
@@ -42,11 +42,9 @@ export function CreateFormGroup ({label, value, updateInfo, name = '', type = 't
                 <Form.Control 
                     type={type} 
                     name={name} 
-                    value={value}
-                    onChange={update}></Form.Control>
+                    value={value || ''}
+                    onChange={handleUpdate}></Form.Control>
             </FloatingLabel>
         </Form.Group>
     );
 }
-
-
