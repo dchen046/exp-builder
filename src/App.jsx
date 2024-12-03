@@ -18,6 +18,7 @@ function App() {
   });
 
   const [educations, updateEducation] = useState(sample.educations);
+  const [experiences, updateExperiences] = useState(sample.experiences);
 
   function updateInfo(e) {
     console.log(e.target.value);
@@ -36,7 +37,9 @@ function App() {
             currInfo={currInfo} 
             updateInfo={updateInfo} 
             educations={educations}
-            updateEducation={updateEducation}/>
+            updateEducation={updateEducation}
+            experiences={experiences}
+            updateExperiences={updateExperiences}/>
         </div>
         <div id='resume'></div>
       </main>

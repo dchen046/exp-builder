@@ -20,7 +20,9 @@ function CvForm({
     currInfo,
     updateInfo,
     educations,
-    updateEducation
+    updateEducation,
+    experiences,
+    updateExperiences
 }) {
     let index = 0;
     return (
@@ -36,11 +38,11 @@ function CvForm({
                     tabIndex={index++} 
                     tabHeader={'Eudcation'} 
                     form={<EducationForm educations={educations} updateEducation={updateEducation} />} />
-{/* 
-                <InputTab 
-                    tabIndex={++index} 
+
+                {/* <InputTab 
+                    tabIndex={index++} 
                     tabHeader={'Experience'} 
-                    handleCreation={InfoForm} /> */}
+                    form={< />} /> */}
             </Accordion>
         </section>
     );
