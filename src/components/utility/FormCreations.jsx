@@ -21,6 +21,21 @@ export function CreateFormGroup ({label, value, updateInfo, name = '', type = 't
         updateInfo(index, e);
     }
 
+    if (type === 'textarea') {
+        return (
+            <Form.Group>
+            <FloatingLabel label={label}>
+                <Form.Control 
+                    as={type} 
+                    style={{ height: '100px' }}
+                    name={name} 
+                    value={value}
+                    onChange={update}></Form.Control>
+            </FloatingLabel>
+        </Form.Group>
+        )
+    }
+
     return (
         <Form.Group>
             <FloatingLabel label={label}>
@@ -33,3 +48,5 @@ export function CreateFormGroup ({label, value, updateInfo, name = '', type = 't
         </Form.Group>
     );
 }
+
+

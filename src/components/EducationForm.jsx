@@ -1,7 +1,5 @@
-// import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
 import { CreateFormGroup } from './utility/FormCreations';
-import { Button } from 'react-bootstrap';
+import { Form, Button } from 'react-bootstrap';
 
 
 function CreateForm({ educations, updateEducation, handleRemove }) {
@@ -12,7 +10,8 @@ function CreateForm({ educations, updateEducation, handleRemove }) {
                     <Form >
                         <CreateFormGroup label='School' value={education.school} updateInfo={updateEducation} index={index} />
                         <CreateFormGroup label='Degree' value={education.degree} updateInfo={updateEducation} index={index} />
-                        <CreateFormGroup label='Graduation Date (Month / Year)' name='gradDate' value={education.gradDate} updateInfo={updateEducation} type='month' index={index} />
+                        <CreateFormGroup label='Graduation Date (Month / Year)' name='graduation' value={education.graduation} updateInfo={updateEducation} type='month' index={index} />
+                        <CreateFormGroup label='GPA (Out of 4.0)' type='number' name='gpa' value={education.gpa} updateInfo={updateEducation} index={index} />
                         <CreateFormGroup label='Location' value={education.location} updateInfo={updateEducation} index={index} />
                         <CreateDeleteBtn handleRemove={handleRemove} index={index} />
                     </Form>
@@ -46,19 +45,20 @@ export function EducationForm({ educations, updateEducation }) {
         updateEducation([...educations, newEducation])
     }
 
-    const handleChange = (index, e) => {
-        const { name, val } = e.target;
-        updateEducation(educations.map((edu, i) => i === index ? { ...edu, [name]: val } : edu));
+    const handleChangeEdu = (index, e) => {
+        const { name, value } = e.target;
+        const update = educations.map((edu, i) => i === index ? { ...edu, [name]: value } : edu);
+        updateEducation(update);
     };
 
-    const handleRemove = (index) => {
+    const handleRemoveEdu = (index) => {
         updateEducation(educations.filter((_, i) => i !== index));
     }
 
     return (
         <section>
             <ul>
-                <CreateForm educations={educations} updateEducation={handleChange} handleRemove={handleRemove} />
+                <CreateForm educations={educations} updateEducation={handleChangeEdu} handleRemove={handleRemoveEdu} />
             </ul>
             <Button
                 id='add-edu'
