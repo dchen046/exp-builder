@@ -17,7 +17,7 @@ function App() {
     github: sample.github,
   });
 
-  const [educations, updateEducation] = useState(sample.education);
+  const [educations, updateEducation] = useState(sample.educations);
 
   function updateInfo(e) {
     console.log(e.target.value);

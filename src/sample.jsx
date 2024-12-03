@@ -4,7 +4,17 @@ export const sample = {
     github: 'Github.com/sample',
     linkedin: 'Linkedin.com/in/sample',
 
-    experience: [
+    educations: [
+        {
+            school: 'Sample University',
+            degree: 'Computer Science BS',
+            location: 'City, State',
+            gradDate: '2020-05',
+            id: Date.now(),
+        },
+    ],
+
+    experiences: [
         {
             company: 'ABC Company',
             position: 'Sample Position',
@@ -12,16 +22,6 @@ export const sample = {
             startDate: '09/2020',
             endDate: '11/2024',
             responsibilities: 'Sample bullet points',
-            id: Date.now(),
-        },
-    ],
-
-    education: [
-        {
-            school: 'Sample University',
-            degree: 'Computer Science BS',
-            location: 'City, State',
-            gradDate: '2020-05',
             id: Date.now(),
         },
     ],
