@@ -1,6 +1,7 @@
 import Accordion from 'react-bootstrap/Accordion';
 import { InfoForm } from './InfoForm';
 import { EducationForm } from './EducationForm';
+import './styles/forms.css'
 
 function InputTab({ tabIndex, tabHeader, form }) {
     return (

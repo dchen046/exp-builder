@@ -20,6 +20,7 @@ function App() {
   const [educations, updateEducation] = useState(sample.education);
 
   function updateInfo(e) {
+    console.log(e.target.value);
     setInfo(prevInfo => ({
       ...prevInfo,
       [e.target.name]: e.target.value,

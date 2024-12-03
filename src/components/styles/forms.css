@@ -1,0 +1,17 @@
+ul {
+    list-style: none;
+    list-style-type: none;
+    margin : 0;
+    padding: 0;
+}
+
+.edu-delete {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: end;
+}
+
+#add-edu {
+    width: 100%;
+}
