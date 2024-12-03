@@ -23,7 +23,7 @@ function CreateForm({ educations, updateEducation, handleRemove }) {
 
 function CreateDeleteBtn({ handleRemove, index}) {
     return (
-        <div className='mb-3 d-flex justify-content-end'>
+        <div className='del-btn mb-3'>
             <Button
                 className='m-2'
                 variant='outline-danger'
@@ -61,7 +61,7 @@ export function EducationForm({ educations, updateEducation }) {
                 <CreateForm educations={educations} updateEducation={handleChangeEdu} handleRemove={handleRemoveEdu} />
             </ul>
             <Button
-                id='add-edu'
+                id='add-btn'
                 variant='outline-success'
                 onClick={handleAddEducation}>+ Add Education</Button>
         </section>

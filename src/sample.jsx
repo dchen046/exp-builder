@@ -1,5 +1,5 @@
 export const sample = {
-    name: 'John Doe',
+    name: 'Sam Ple',
     email: 'email@address.com',
     github: 'Github.com/sample',
     linkedin: 'Linkedin.com/in/sample',

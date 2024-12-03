@@ -23,7 +23,7 @@ function CreateForm({ experiences, updateExperience, handleRemove }) {
 
 function CreateDeleteBtn({ handleRemove, index}) {
     return (
-        <div className='mb-3 d-flex justify-content-end'>
+        <div className='del-btn mb-3'>
             <Button
                 className='m-2'
                 variant='outline-danger'
@@ -64,7 +64,7 @@ export function ExperienceForm( {experiences, updateExperience} ) {
                 <CreateForm experiences={experiences} updateExperience={handleChangeExp} handleRemove={handleRemoveExp} />
             </ul>
             <Button
-                id='add-edu'
+                id='add-btn'
                 variant='outline-success'
                 onClick={handleAddExperience}>+ Add Experience</Button>
         </section>
