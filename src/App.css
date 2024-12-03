@@ -2,13 +2,28 @@
   /* max-width: 1280px; */
   margin: 0 auto;
   padding: 2rem;
-  /* text-align: center; */
   min-height: 100vh;
   box-sizing: border-box;
+  text-align: center;
 }
 
 #resume {
-  width: 8.5in;
-  height: 11in;
-  border: 2px solid black;
+  max-width: 210mm;
+  max-height: 297mm;
+  border: 1px solid black;
+}
+
+@media print {
+  #inputs {
+    display: none;
+  }
+
+  #root {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    font-family: sans-serif;
+    size: A4 portrait;
+    border: none;
+  }
 }

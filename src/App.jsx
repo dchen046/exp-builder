@@ -1,5 +1,5 @@
-import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css'
 import { useState } from 'react'
 import { sample } from './sample';
 import CvForm from './components/CvForm';
@@ -19,9 +19,9 @@ function App() {
 
   return (
     <>
-      <main className='container justify-content-center'>
+      <main className='justify-content-center' data-bs-theme='dark'>
         <Row className='justify-content-center'>
-          <Col lg='4'>
+          <Col lg='4' id='inputs'>
             < CvForm
               currInfo={currInfo}
               updateInfo={updateInfo}
@@ -31,7 +31,10 @@ function App() {
               updateExperience={updateExperience} />
           </Col>
           <Col id='resume'>
-            resume
+          <p>
+          resumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumeresumere
+          </p>
+          
           </Col>
         </Row>
       </main>
