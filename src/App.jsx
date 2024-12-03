@@ -1,10 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css'
 import { useState } from 'react'
 import { sample } from './sample';
 import CvForm from './components/Forms/CvForm';
 import { Col, Row } from 'react-bootstrap';
 import Resume from './components/resume';
+
+
+import './App.css'
 
 
 function App() {
@@ -32,7 +34,7 @@ function App() {
               updateExperience={updateExperience} />
           </Col>
           <Col id='resume'>
-            <Resume info={currInfo} educations={educations}/>
+            <Resume info={currInfo} educations={educations} experiences={experiences}/>
           </Col>
         </Row>
       </main>

@@ -1,9 +1,10 @@
 function Header({info}) {
+    const contact = [info.email, info.github, info.linkedin]
     return (
-        <section id='cvHeader' className="text-center">
+        <section id='cvHeader' className="text-center mb-2">
             <h1>{info.name}</h1>
             <p>
-                {info.email} | {info.github} | {info.linkedin} 
+                {contact.join(' | ')} 
             </p>
         </section>
     )
