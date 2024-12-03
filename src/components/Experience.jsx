@@ -54,8 +54,6 @@ function WritePosition({ position, start, end }) {
 
 function WriteResponsiblities({ resp }) {
     let points = resp.split('\n');
-    console.log(points.length);
-    console.log(points);
     const writePoint = () => {
         return (
             points.map((point, index) => {
