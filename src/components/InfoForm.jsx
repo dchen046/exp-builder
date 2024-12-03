@@ -13,9 +13,16 @@ function CreateForm({ currInfo, updateInfo }) {
 }
 
 export function InfoForm({ currInfo, updateInfo }) {
+    function update(e) {
+        updateInfo(prevInfo => ({
+          ...prevInfo,
+          [e.target.name]: e.target.value,
+        }));
+      }
+
     return (
         <section>
-            <CreateForm currInfo={currInfo} updateInfo={updateInfo} />
+            <CreateForm currInfo={currInfo} updateInfo={update} />
         </section>
     )
 }

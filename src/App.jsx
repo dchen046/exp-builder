@@ -1,16 +1,13 @@
-import { useState } from 'react'
-import { sample } from './sample';
-// import reactLogo from './assets/react.svg'
-// import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-// import { InfoForm } from './components/InfoForm';
+import { useState } from 'react'
+import { sample } from './sample';
 import CvForm from './components/CvForm';
+import { Col, Row } from 'react-bootstrap';
 
 
 function App() {
-  // const [count, setCount] = useState(0)
-  const [currInfo, setInfo] = useState({
+  const [currInfo, updateInfo] = useState({
     name: sample.name,
     email: sample.email,
     linkedin: sample.linkedin,
@@ -20,27 +17,23 @@ function App() {
   const [educations, updateEducation] = useState(sample.educations);
   const [experiences, updateExperience] = useState(sample.experiences);
 
-  function updateInfo(e) {
-    console.log(e.target.value);
-    setInfo(prevInfo => ({
-      ...prevInfo,
-      [e.target.name]: e.target.value,
-    }));
-  }
-
   return (
     <>
-      <main>
-        <div id='inputs'>
-          < CvForm 
-            currInfo={currInfo} 
-            updateInfo={updateInfo} 
-            educations={educations}
-            updateEducation={updateEducation}
-            experiences={experiences}
-            updateExperience={updateExperience}/>
-        </div>
-        <div id='resume'></div>
+      <main className='container justify-content-center'>
+        <Row className='justify-content-center'>
+          <Col lg='4'>
+            < CvForm
+              currInfo={currInfo}
+              updateInfo={updateInfo}
+              educations={educations}
+              updateEducation={updateEducation}
+              experiences={experiences}
+              updateExperience={updateExperience} />
+          </Col>
+          <Col id='resume'>
+            resume
+          </Col>
+        </Row>
       </main>
     </>
   )
