@@ -7,7 +7,7 @@ export const sample = {
     educations: [
         {
             school: 'Sample University',
-            degree: 'Computer Science BS',
+            degree: 'Sample BS',
             location: 'City, State',
             graduation: '2020-05',
             gpa: '3.9',
